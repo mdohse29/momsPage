@@ -44,7 +44,7 @@ span.red {
     flex-wrap: wrap;
     width: 65%;
     margin-left: 17.5%;
-    border: 1px dashed black;
+    border: 1px solid black;
     border-top: none;
     border-radius: 5px;
     padding-top: 20px;
