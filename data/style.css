@@ -1,3 +1,12 @@
+body {
+    background-color:#27272a;
+}
+.presentation{
+    background-image: url("../img/humam-npwb4wE5C4Q-unsplash.jpg");
+    background-repeat: no-repeat;
+    height: 90vh;
+    background-size: 100% 90vh;
+}
 p {
     text-align: center;
 }
@@ -29,7 +38,7 @@ span.red {
 .tiles {
     display: flex;
     /* flex-direction: row; */
-    background-color: #def7ff;
+    background-color: #f7dada;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
@@ -55,7 +64,7 @@ span.red {
     font-size: 1.25em;
     cursor: pointer;
     user-select: none;
-    background-color: lightblue;
+    background-color: #fda6a8;
 
 }
 .tile {
@@ -66,8 +75,8 @@ span.red {
     flex-wrap: wrap;
     height: 150px;
     width: 150px;
-    background-color: lightblue;
-    box-shadow: 10px 0px 5px 2px darkgrey;
+    background-color: #fda6a8;
+    box-shadow: 0px 0px 5px 2px darkgrey;
     border-radius: 50%;
     user-select: none;
     cursor: pointer;
@@ -75,7 +84,7 @@ span.red {
     margin: 5px;
 }
 .tile:hover {
-    background-color: rgb(26, 137, 173);
+    background-color: #f38b8c;
     /* box-shadow: 10px 10px 5px 2px darkgrey; */
 }
 .drawer {
