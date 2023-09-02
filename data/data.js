@@ -73,5 +73,20 @@ const drawers = {
                 }
             }
         }
+    },
+    drawer3: {
+        hidden:true,
+        title: "Cool Stuff",
+        buttons: {
+            button1: {
+                hidden: true,
+                url: './todoList/index.html',
+                text: {
+                    main: 'ToDo List',
+                    sub: '',
+                    warn:false
+                }
+            }
+        }
     }
 }
