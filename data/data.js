@@ -38,6 +38,15 @@ const drawers = {
                     sub: '',
                     warn: true
                 }
+            },
+            button5: {
+                hidden: false,
+                url: 'https://www.pinterest.com/',
+                text: {
+                    main:'Pinterest',
+                    sub:'',
+                    warn:false
+                }
             }
         }
     },
