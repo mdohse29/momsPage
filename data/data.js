@@ -40,7 +40,7 @@ const drawers = {
                 }
             },
             button5: {
-                hidden: true,
+                hidden: false,
                 url: 'https://www.pinterest.com/',
                 text: {
                     main:'Pinterest',
