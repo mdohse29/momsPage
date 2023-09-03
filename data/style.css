@@ -4,8 +4,8 @@ body {
 .presentation{
     background-image: url("../img/humam-npwb4wE5C4Q-unsplash.jpg");
     background-repeat: no-repeat;
-    height: 90vh;
-    background-size: 100% 90vh;
+    height: 100vh;
+    max-height: 120vh;
 }
 p {
     text-align: center;
