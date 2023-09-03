@@ -1,5 +1,8 @@
 const flk = document.querySelectorAll('.flk');
 
+const pres = document.querySelector('.presentation');
+pres.style.backgroundSize = "100% " + pres.scrollHeight + "px";
+
 if (flk.length <= 0){
     document.querySelector('#magic').style.display = 'none'
 }
