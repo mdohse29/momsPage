@@ -1,9 +1,10 @@
-import { appendFile } from 'fs';
+const fs = require('fs');
 function addItem(item){
     let data = item;
-    appendFile('./db/thelist.txt', data, (err) => {
+    fs.appendFile('./db/thelist.txt', data, (err) => {
         if(err){
             console.log(err);
         }
+        console.log(data);
     });
 }
