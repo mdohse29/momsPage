@@ -2,7 +2,7 @@ body {
     background-color:#27272a;
 }
 .presentation{
-    background-image: url("../img/humam-npwb4wE5C4Q-unsplash.jpg");
+    background-image: url("../img/thomas-lipke-oIuDXlOJSiE-unsplash.jpg");
     background-repeat: no-repeat;
     height: 100vh;
     max-height: 120vh;
@@ -38,7 +38,8 @@ span.red {
 .tiles {
     display: flex;
     /* flex-direction: row; */
-    background-color: #f7dada;
+    /* background-color: #f7dada; */
+    background-color: transparent;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
@@ -62,9 +63,11 @@ span.red {
     padding-bottom: 20px;
     text-align: center;
     font-size: 1.25em;
+    font-weight: bold;
     cursor: pointer;
     user-select: none;
-    background-color: #fda6a8;
+    /* background-color: #fda6a8; */
+    background-color: transparent;
 
 }
 .tile {
@@ -84,6 +87,11 @@ span.red {
     padding: 5px;
     margin: 5px;
 }
+
+.expand:hover {
+    background-color: #f7dada;
+}
+
 .tile:hover {
     background-color: #f38b8c;
     /* box-shadow: 10px 10px 5px 2px darkgrey; */
