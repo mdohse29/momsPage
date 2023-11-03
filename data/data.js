@@ -84,7 +84,7 @@ const drawers = {
         }
     },
     drawer3: {
-        hidden:true,
+        hidden:false,
         title: "Cool Stuff",
         buttons: {
             button1: {
@@ -94,6 +94,15 @@ const drawers = {
                     main: 'ToDo List',
                     sub: '',
                     warn:false
+                }
+            },
+            button2: {
+                hidden: false,
+                url: 'https://mdohse29.github.io/misc/archivedMovies.html',
+                text: {
+                    main: 'Archived Movies',
+                    sub: 'mdohse29.github.io',
+                    warn: false
                 }
             }
         }
