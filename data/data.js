@@ -100,7 +100,7 @@ const drawers = {
                 hidden: false,
                 url: 'https://mdohse29.github.io/misc/archivedMovies.html',
                 text: {
-                    main: 'Archived Movies',
+                    main: 'Full Movie List',
                     sub: 'mdohse29.github.io',
                     warn: false
                 }
