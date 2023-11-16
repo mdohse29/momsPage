@@ -104,6 +104,15 @@ const drawers = {
                     sub: 'mdohse29.github.io',
                     warn: false
                 }
+            },
+            button3: {
+                hidden: false,
+                url: 'https://mdohse29.github.io/picker/',
+                text: {
+                    main: 'Gift Picker',
+                    sub: '',
+                    warn: false
+                }
             }
         }
     }
