@@ -98,7 +98,7 @@ const drawers = {
             },
             button2: {
                 hidden: false,
-                url: 'https://mdohse29.github.io/misc/archivedMovies.html',
+                url: 'https://mdohse29.github.io/misc/movieList/',
                 text: {
                     main: 'Full Movie List',
                     sub: 'mdohse29.github.io',
@@ -110,8 +110,8 @@ const drawers = {
                 url: 'https://mdohse29.github.io/picker/',
                 text: {
                     main: 'Gift Picker',
-                    sub: '',
-                    warn: false
+                    sub: 'Seasonal',
+                    warn: true
                 }
             }
         }
