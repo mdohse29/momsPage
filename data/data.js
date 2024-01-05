@@ -89,7 +89,7 @@ const drawers = {
         buttons: {
             button1: {
                 hidden: true,
-                url: './todoList/index.html',
+                url: './todoList/',
                 text: {
                     main: 'ToDo List',
                     sub: '',
@@ -106,7 +106,7 @@ const drawers = {
                 }
             },
             button3: {
-                hidden: false,
+                hidden: true,
                 url: 'https://mdohse29.github.io/picker/',
                 text: {
                     main: 'Gift Picker',
