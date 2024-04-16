@@ -84,3 +84,16 @@ for (let ex of expand){
             
     })
 }
+
+document.querySelector('#joke').addEventListener('click', function() {
+    joke();
+});
+
+document.querySelector('.md-modal-background').addEventListener('click', () => {
+    document.querySelector('.md-modal').classList.add('dnone');
+    document.querySelector('.card-body').innerHTML = '';
+});
+
+document.querySelector('.card-footer > button').addEventListener('click', () => {
+    document.querySelector('#answer').classList.remove('dnone');
+});
