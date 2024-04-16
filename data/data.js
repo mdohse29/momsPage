@@ -115,7 +115,7 @@ const drawers = {
                 }
             },
             button4: {
-                hidden: true,
+                hidden: false,
                 url: '',
                 text: {
                     main: 'Tell me a Joke',

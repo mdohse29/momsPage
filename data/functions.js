@@ -86,23 +86,14 @@ for (let ex of expand){
 }
 
 document.querySelector('#joke').addEventListener('click', function() {
-    // let theJoke = await joke();
-    // let body = document.querySelector('.card-body');
-    // let setUp = document.createElement('p');
-    // let punchLine = document.createElement('p');
-
-    // setUp.innerText = theJoke.setup;
-    // punchLine.innerText = theJoke.punchline
-    // punchLine.classList.add('dnone');
-
-    document.querySelector('.md-modal').classList.remove('dnone');
-    // CAN'T SEEM TO GET THE API TO ACTUAL POPULATE ANYTHING AT THIS POINT.
-    console.log(joke());
-
-    // body.appendChild(setUp);
-    // body.appendChild(punchLine);
+    joke();
 });
 
 document.querySelector('.md-modal-background').addEventListener('click', () => {
     document.querySelector('.md-modal').classList.add('dnone');
-})
+    document.querySelector('.card-body').innerHTML = '';
+});
+
+document.querySelector('.card-footer > button').addEventListener('click', () => {
+    document.querySelector('#answer').classList.remove('dnone');
+});
