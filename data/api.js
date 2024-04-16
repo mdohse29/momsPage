@@ -1,6 +1,7 @@
-function joke(){
-    getRandomJoke().then((response) => { return response.json()})
-    .then((data) => {
-        console.log(data.setup);
-    })
+let joke = function (){
+    getRandomJoke().then((response) => {
+        let data = response.json();
+        // console.log(data);
+        return data;
+    });
 }

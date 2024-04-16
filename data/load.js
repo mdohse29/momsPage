@@ -38,21 +38,32 @@ for (let drawer in drawers){
     for (let button in buttons){
         let tile = document.createElement('div');
         tile.classList.add('tile');
+
         if (buttons[button].hidden){
             tile.classList.add('flk');
         }
-        tile.setAttribute('url', buttons[button].url);
+
+        if (buttons[button].url){
+            tile.setAttribute('url', buttons[button].url);
+        }
+
+        if (buttons[button].id){
+            tile.setAttribute('id', buttons[button].id);
+        }
 
         let p = document.createElement('p');
         p.innerHTML = buttons[button].text.main;
+
         if (buttons[button].text.sub){
             let br = document.createElement('br');
             p.appendChild(br);
 
             let sub = document.createElement('span');
+
             if (buttons[button].text.warn){
                 sub.classList.add('red');
             }
+
             sub.innerHTML = buttons[button].text.sub;
 
             p.appendChild(sub);

@@ -113,6 +113,16 @@ const drawers = {
                     sub: 'Seasonal',
                     warn: true
                 }
+            },
+            button4: {
+                hidden: false,
+                url: '',
+                text: {
+                    main: 'Tell me a Joke',
+                    sub: '',
+                    warn: false
+                },
+                id: 'joke'
             }
         }
     }
