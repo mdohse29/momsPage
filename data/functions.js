@@ -91,9 +91,22 @@ document.querySelector('#joke').addEventListener('click', function() {
 
 document.querySelector('.md-modal-background').addEventListener('click', () => {
     document.querySelector('.md-modal').classList.add('dnone');
+    document.querySelector('#close').classList.add('dnone');
+    document.querySelector('#ans').classList.remove('dnone');
     document.querySelector('.card-body').innerHTML = '';
 });
 
-document.querySelector('.card-footer > button').addEventListener('click', () => {
+document.querySelector('#close').addEventListener('click', () => {
+    document.querySelector('.md-modal').classList.add('dnone');
+    document.querySelector('#close').classList.add('dnone');
+    document.querySelector('#ans').classList.remove('dnone');
+    document.querySelector('.card-body').innerHTML = '';
+});
+
+document.querySelector('#ans').addEventListener('click', () => {
+    
     document.querySelector('#answer').classList.remove('dnone');
+    document.querySelector('#close').classList.remove('dnone');
+    document.querySelector('#ans').classList.add('dnone');
+
 });
