@@ -1,4 +1,11 @@
 let joke = async function (){
+    let body = document.querySelector('.card-body');
+    let loading = document.createElement('div');
+    loading.id = 'loading';
+    loading.innerText = 'Loading...';
+    body.appendChild(loading);
+    
+    document.querySelector('.md-modal').classList.remove('dnone');
     await getRandomJoke().then((response) => {
 //  NOT HOW I IMAGINED THIS GOING !!!
 
@@ -6,7 +13,6 @@ let joke = async function (){
         // setup = data.setup;
         // punchline = data.punchline;
         data.then(value => {
-            let body = document.querySelector('.card-body');
             let setUp = document.createElement('p');
             let punchLine = document.createElement('p');
 
@@ -15,7 +21,7 @@ let joke = async function (){
             punchLine.classList.add('dnone');
             punchLine.setAttribute('id', 'answer');
 
-            document.querySelector('.md-modal').classList.remove('dnone');
+            document.querySelector('#loading').remove();
 
             body.appendChild(setUp);
             body.appendChild(punchLine);
