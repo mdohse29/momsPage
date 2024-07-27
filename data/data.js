@@ -123,6 +123,15 @@ const drawers = {
                     warn: false
                 },
                 id: 'joke'
+            },
+            button5: {
+                hidden:false,
+                url:'./display/index.html',
+                text: {
+                    main:'Display Page',
+                    sub:'',
+                    warn:false
+                }
             }
         }
     }
