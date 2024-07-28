@@ -125,7 +125,7 @@ const drawers = {
                 id: 'joke'
             },
             button5: {
-                hidden:false,
+                hidden:true,
                 url:'./display/index.html',
                 text: {
                     main:'Display Page',
