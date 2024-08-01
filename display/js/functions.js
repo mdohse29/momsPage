@@ -1,10 +1,12 @@
 window.onload = function(){
 
+    let mousexy = {};
+
     let covers = document.querySelectorAll('.frame-cover');
 
     covers.forEach(cover => {
         cover.addEventListener('click', function () {
-            document.querySelector('html').scrollTo({top:0, left:0, behavior:'instant'})
+            
             document.querySelector('html').style = 'overflow: hidden;';
 
             let parent = this.parentElement.parentElement.parentElement;
@@ -13,7 +15,7 @@ window.onload = function(){
             let currentHeight = $(parent).height();
             
             parent.classList.add('active');
-            
+
             btnClose.addEventListener('click', function () {
                 let parent = document.querySelector('.active');
                 let info = parent.querySelectorAll('.frame-info');
@@ -27,6 +29,8 @@ window.onload = function(){
                 parent.classList.remove('active');
                 parent.querySelector('.frame-cover').classList.remove('dnone');
                 parent.querySelector('.ratio').removeAttribute('style');
+                document.querySelector('.header').removeAttribute('style');
+                document.querySelector('.footer').removeAttribute('style');
                 parent.querySelector('iframe').scrolling = 'no';
 
 
@@ -53,11 +57,14 @@ window.onload = function(){
 
             parent.querySelector('iframe').scrolling = 'auto';
 
+            this.classList.add('dnone');
+            
             let columns = document.querySelectorAll('.col-content');
 
-            this.classList.add('dnone');
-
             let info = parent.querySelectorAll('.frame-info');
+
+            document.querySelector('.header').style.zIndex = 1;
+            document.querySelector('.footer').style.zIndex = -1;
 
             info.forEach(p => {
                 p.classList.remove('dnone');
@@ -117,8 +124,8 @@ window.onload = function(){
                 openDrawer.parentElement.querySelector('h5').click();
             }
             if (content.getAttribute('isexpanded') === 'true'){
-                this.querySelector('.bi').classList.toggle('bi-caret-right');
-                this.querySelector('.bi').classList.toggle('bi-caret-down');
+                this.querySelector('.bi').classList.add('bi-caret-right');
+                this.querySelector('.bi').classList.remove('bi-caret-down');
                 $(content).slideUp({
                     duration: 500,
                     complete: function(){
@@ -129,8 +136,8 @@ window.onload = function(){
                     }
                 });
             }else{
-                this.querySelector('.bi').classList.toggle('bi-caret-right');
-                this.querySelector('.bi').classList.toggle('bi-caret-down');
+                this.querySelector('.bi').classList.remove('bi-caret-right');
+                this.querySelector('.bi').classList.add('bi-caret-down');
                 this.parentElement.classList.remove('border-bottom');
                 $(content).slideDown({
                     duration: 500,
