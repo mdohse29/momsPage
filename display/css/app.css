@@ -1,5 +1,6 @@
 *{
     z-index: 1;
+    scrollbar-width: thin;
 }
 
 iframe {
@@ -23,12 +24,21 @@ div.frame-cover:hover {
     background-color: rgba(0,0,0,.5);
 }
 
+.frame-info {
+    margin-bottom: 0px;
+}
+
 .dnone {
     display: none;
 }
 
+.header, .footer {
+    background: linear-gradient(to bottom right, rgba(0,0,0,1), rgb(2, 1, 75));
+    color: white;
+}
+
 .card.active {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 5vw;
     width: 90vw;
@@ -47,8 +57,8 @@ div.frame-cover:hover {
     }
 }
 
-.card.active * {
-    z-index: 3;
+.card.active, .card.active * {
+    z-index: 2000;
 }
 
 .card.active .card-body {
@@ -62,9 +72,9 @@ div.frame-cover:hover {
 .drawer > p {
     padding: 0px 10px 5px 20px;
     margin-bottom: 0px;
-    /* border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black; */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    max-height: 15em;
 }
 
 .drawer > h5 {
@@ -81,36 +91,9 @@ div.frame-cover:hover {
 
 .btn-close {
     float: right;
+    color: white;
     border: 2px solid var(--bs-danger);
 }
-
-.tab.active {
-    background-color: rgba(127, 226, 243, 0.85) !important;
-    box-shadow: inset 0px -6px 3px rgb(52, 168, 197);
-  }
-  
-  .tabs-container, .tabs {
-    display: flex;
-  }
-  
-  .tabs {
-    width: 100%
-  }
-  
-  .tab {
-    border: 1px solid black;
-    background-color: rgb(245, 245, 220, 0.5);
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    padding: 5px 0px;
-    font-weight: bolder;
-    width: 100px;
-    text-align: center;
-    border-radius: 10px 10px 0px 0px;
-    min-width: 68px;
-    cursor: pointer;
-  }
 
 @media (width < 1300px){
     .ratio {

@@ -33,11 +33,16 @@ document.body.prepend(
         mkDiv({class:'container-fluid'}),
         {
             0:nestElem([
-                mkDiv({class:'row pt-2 pb-2 header'}),
+                mkDiv({class:'row pt-3 pb-3 sticky-top header'}),
                 mkDiv({class:'col text-center'}),
-                mkHead({hType:'h1', class:'h1', inner:'Pages I Have Made'})
+                mkHead({hType:'h1', class:'h1', inner:'Display Room'})
             ]),
             1:nestElem([
+                mkDiv({class:'row mt-4 justify-content-center'}),
+                mkDiv({class:'col col-lg-6'}),
+                mkP({inner:'Welcome to the Display Room. I am trying to think of something to put here. Any ideas?'})
+            ]),
+            2:nestElem([
                 mkDiv({class:'row mt-5 align-items-center justify-content-center'}),
                 {
                     1:nestElem([
@@ -93,7 +98,7 @@ document.body.prepend(
                     ])
                 }
             ]),
-            2:nestElem([
+            3:nestElem([
                 mkDiv({class:'row mt-5 align-items-center justify-content-center'}),
                 {
                     1:nestElem([
@@ -146,7 +151,65 @@ document.body.prepend(
                         }
                     ])
                 }
-            ])
+            ]),
+            4:nestElem([
+                mkDiv({class:'row mt-5 align-items-center justify-content-center'}),
+                {
+                    1:nestElem([
+                        mkDiv({class:'col-6 col-lg-4 text-center col-content'}),
+                        mkDiv({class:'card shadow'}),
+                        {
+                            1:nestElem([
+                                mkDiv({class:'card-body pb-0'}),
+                                mkDiv({class:'card-title'}),
+                                {
+                                    1:mkHead({hType:'h3', class:'h3', inner:'The Gift Picker'}), // Title
+                                    2:mkP({class:'frame-info dnone', inner:'This page is quite old and is going to get redone soon. Just FYI'})
+                                }
+                            ]),
+                            2:nestElem([
+                                mkDiv({class:'card-body'}),
+                                nestElem([
+                                    mkDiv({class:'ratio'}),
+                                    {
+                                        1:mkDiv({class:'frame-cover '}),
+                                        2:mkElem({elemType:'iframe', scrolling:'no', src:'https://mdohse29.github.io/picker/'}) // IFRAME
+                                    }
+                                ])
+                            ])
+                        }
+
+                    ]),
+                    2:nestElem([
+                        mkDiv({class:'col-6 col-lg-4 col-content align-self-start'}),
+                        mkDiv({class:'container description'}),
+                        {
+                            1:nestElem([
+                                mkDiv({class:'drawer border-bottom'}),
+                                {
+                                    1:mkHead({hType:'h5', class:'h5', inner:'Purpose'}),
+                                    2:mkP({class:'border-start border-end border-bottom dnone', isexpanded:'false', inner:'Something Here'})
+                                }
+                            ]),
+                            2:nestElem([
+                                mkDiv({class:'drawer border-bottom'}),
+                                {
+                                    1:mkHead({hType:'h5', class:'h5', inner:'Assets Used'}),
+                                    2:mkP({class:'border-start border-end border-bottom dnone', isexpanded:'false', inner:'Something Here'})
+                                }
+                            ]),
+                            3:nestElem([
+                                mkDiv({class:'drawer border-bottom'}),
+                                {
+                                    1:mkHead({hType:'h5', class:'h5', inner:'Extra Details'}),
+                                    2:mkP({class:'border-start border-end border-bottom dnone', isexpanded:'false', inner:'Something Here'})
+                                }
+                            ])
+                        }
+                    ])
+                }
+            ]),
+            5:mkDiv({class:'row pt-3 pb-4 mb-0 mt-5 sticky-bottom footer'})
         }
     ])
 );
