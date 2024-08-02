@@ -126,7 +126,7 @@ const drawers = {
             },
             button5: {
                 hidden:false,
-                url:'./display/index.html',
+                url:'https://mdohse29.github.io/display/',
                 text: {
                     main:'Display Page',
                     sub:'',
