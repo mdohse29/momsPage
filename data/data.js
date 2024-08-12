@@ -43,9 +43,9 @@ const drawers = {
                 hidden: false,
                 url: 'https://www.pinterest.com/',
                 text: {
-                    main:'Pinterest',
-                    sub:'',
-                    warn:false
+                    main: 'Pinterest',
+                    sub: '',
+                    warn: false
                 }
             }
         }
@@ -55,30 +55,30 @@ const drawers = {
         title: 'News',
         buttons: {
             button1 : {
-                hidden:false,
-                url:'https://www.foxnews.com/',
+                hidden: false,
+                url: 'https://www.foxnews.com/',
                 text: {
-                    main:'Fox News',
+                    main: 'Fox News',
                     sub: '',
-                    warn:false
+                    warn: false
                 }
             },
             button2 : {
-                hidden:false,
-                url:'https://weather.com/weather/today/l/33e9a4faddfea28cc02768d8c27f285c37419549df2a41bd6cbae78eb7e8c7e9',
+                hidden: false,
+                url: 'https://weather.com/weather/today/l/33e9a4faddfea28cc02768d8c27f285c37419549df2a41bd6cbae78eb7e8c7e9',
                 text: {
-                    main:'Weather.com',
+                    main: 'Weather.com',
                     sub: 'Dewey-Humbolt',
-                    warn:false
+                    warn: false
                 }
             },
             button3 : {
-                hidden:false,
-                url:'https://npr.org/',
+                hidden: false,
+                url: 'https://npr.org/',
                 text: {
-                    main:'NPR News',
+                    main: 'NPR News',
                     sub: 'National Public Radio',
-                    warn:false
+                    warn: false
                 }
             }
         }
@@ -88,12 +88,12 @@ const drawers = {
         title: "Cool Stuff",
         buttons: {
             button1: {
-                hidden: true,
-                url: './todoList/',
+                hidden: false,
+                url: 'https://mdohse29.github.io/todoList/',
                 text: {
                     main: 'ToDo List',
-                    sub: '',
-                    warn:false
+                    sub: 'Uses Cookies to Temp Save',
+                    warn: true
                 }
             },
             button2: {
@@ -101,7 +101,7 @@ const drawers = {
                 url: 'https://mdohse29.github.io/misc/movieList/',
                 text: {
                     main: 'Full Movie List',
-                    sub: 'mdohse29.github.io',
+                    sub: 'mdohse29.github.io/movieList/',
                     warn: false
                 }
             },
@@ -125,12 +125,12 @@ const drawers = {
                 id: 'joke'
             },
             button5: {
-                hidden:false,
-                url:'https://mdohse29.github.io/display/',
+                hidden: false,
+                url: 'https://mdohse29.github.io/display/',
                 text: {
-                    main:'Display Page',
-                    sub:'',
-                    warn:false
+                    main: 'Display Page',
+                    sub: '',
+                    warn: false
                 }
             }
         }
