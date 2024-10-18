@@ -5,7 +5,7 @@ body {
 }
 .presentation{
     /* background-image: url("../img/andreas-kretschmer-fr2--0bD6JU-unsplash.jpg"); */
-    background-image: url("../img/stormy.jpg");
+    background-image: url("../img/noah-silliman-y3IwQ9hUE4A-unsplash.jpg");
     background-repeat: no-repeat;
     height: 100vh;
     max-height: 120vh;
@@ -16,7 +16,7 @@ p {
 }
 .mainHead {
     margin-bottom: 5%;
-    color: white;
+    color: rgb(97, 97, 97);
     
 }
 h1 {
@@ -59,6 +59,7 @@ span.red {
 .expand {
     display: block;
     justify-content: space-around;
+    color: rgb(97, 97, 97);
     align-items: center;
     width: 65%;
     margin-left: 17.5%;
@@ -95,6 +96,7 @@ span.red {
 
 .expand:hover {
     background-color: #f7dada;
+    color: black;
 }
 
 .tile:hover {
