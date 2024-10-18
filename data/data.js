@@ -21,6 +21,15 @@ const drawers = {
                     warn: true
                 }
             },
+            button6: {
+                hidden: false,
+                url: 'https://photos.google.com',
+                text: {
+                    main: 'Google Photos',
+                    sub: '',
+                    warn: false
+                }
+            },
             button3: {
                 hidden: false,
                 url: 'https://facebook.com',
