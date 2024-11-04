@@ -97,7 +97,7 @@ const drawers = {
         title: "Cool Stuff",
         buttons: {
             button1: {
-                hidden: true,
+                hidden: false,
                 url: 'https://mdohse29.github.io/todoList/',
                 text: {
                     main: 'ToDo List',
@@ -106,7 +106,7 @@ const drawers = {
                 }
             },
             button2: {
-                hidden: true,
+                hidden: false,
                 url: 'https://mdohse29.github.io/misc/movieList/',
                 text: {
                     main: 'Full Movie List',
@@ -134,21 +134,12 @@ const drawers = {
                 id: 'joke'
             },
             button5: {
-                hidden: true,
+                hidden: false,
                 url: 'https://mdohse29.github.io/display/',
                 text: {
                     main: 'Display Page',
                     sub: '',
                     warn: false
-                }
-            },
-            button6: {
-                hidden: false,
-                url: './dev/',
-                text: {
-                    main: 'Check Out The New Version',
-                    sub: 'still in progress',
-                    warn: true
                 }
             }
         }
