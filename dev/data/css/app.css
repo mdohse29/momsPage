@@ -1,0 +1,71 @@
+body {
+    height: 94vh;
+    max-height: 120vh;
+}
+nav {
+
+    background-color: black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+#news-container, #social-container, #junk-container {
+    background-color: white;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.375rem;
+    opacity: 0;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+}
+
+.dnone {
+    display: none !important;
+}
+
+.card {
+    height: 95%;
+    width: inherit;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content {
+    display: inherit;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.md-button {
+    background-color: lightcoral;
+    width: 13%;
+    min-width: fit-content;
+    height: 100px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+}
+
+.container.fade-in {
+    opacity: 1;
+}
+
+.presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/noah-silliman-y3IwQ9hUE4A-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    height: 100%;
+    max-height: 120vh;
+}
