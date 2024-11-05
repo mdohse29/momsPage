@@ -1,6 +1,7 @@
 body {
     height: 94vh;
     max-height: 120vh;
+    overflow: hidden;
 }
 nav {
 
@@ -27,6 +28,7 @@ nav {
 }
 
 .card {
+    background: white;
     height: 95%;
     width: inherit;
     flex-direction: row;
@@ -42,17 +44,34 @@ nav {
     width: 100%;
 }
 
+.img-thumbnail {
+    width: 50px;
+    height: 50px;
+}
+
 .md-button {
-    background-color: lightcoral;
+    display: inherit;
+    flex-direction: column;
+    justify-content: inherit;
+    align-items: inherit;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px black;
     width: 13%;
     min-width: fit-content;
     height: 100px;
     text-decoration: none;
     text-align: center;
     color: black;
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
+    cursor: pointer;
+    user-select: none;
+}
+
+.md-button:hover {
+    background-color: var(--bs-primary);
+    color: white;
+    box-shadow: 1px 2px 20px black;
 }
 
 .container.fade-in {
@@ -66,6 +85,7 @@ nav {
     background-image: url("../img/noah-silliman-y3IwQ9hUE4A-unsplash.jpg");
     background-repeat: no-repeat;
     background-position-y: center;
+    background-size:cover;
     height: 100%;
     max-height: 120vh;
 }

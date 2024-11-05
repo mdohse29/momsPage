@@ -1,10 +1,11 @@
-const drawers = {
-    drawer1 : {
+const drawers = [
+    {
         hidden: false,
         title: 'Email/Social',
-        buttons:{
-            button1: {
+        buttons: [
+            {
                 hidden: false,
+                icon:'yahoo.png',
                 url: 'https://mail.yahoo.com/',
                 text: {
                     main: 'Yahoo! Mail',
@@ -12,8 +13,9 @@ const drawers = {
                     warn: true
                 }
             },
-            button2: {
+            {
                 hidden: false,
+                icon:'gmail.png',
                 url: 'https://mail.google.com/',
                 text: {
                     main: 'Gmail',
@@ -21,8 +23,9 @@ const drawers = {
                     warn: true
                 }
             },
-            button6: {
+            {
                 hidden: false,
+                icon:'gphoto.png',
                 url: 'https://photos.google.com',
                 text: {
                     main: 'Google Photos',
@@ -30,8 +33,9 @@ const drawers = {
                     warn: false
                 }
             },
-            button3: {
+            {
                 hidden: false,
+                icon:'facebook.png',
                 url: 'https://facebook.com',
                 text: {
                     main: 'Facebook',
@@ -39,8 +43,9 @@ const drawers = {
                     warn: true
                 }
             },
-            button4: {
+            {
                 hidden: false,
+                icon:'youtube.png',
                 url: 'https://youtube.com',
                 text: {
                     main: 'Youtube',
@@ -48,8 +53,9 @@ const drawers = {
                     warn: true
                 }
             },
-            button5: {
+            {
                 hidden: false,
+                icon:'pinterest.png',
                 url: 'https://www.pinterest.com/',
                 text: {
                     main: 'Pinterest',
@@ -57,14 +63,15 @@ const drawers = {
                     warn: false
                 }
             }
-        }
+        ]
     },
-    drawer2 : {
+    {
         hidden: false,
         title: 'News',
-        buttons: {
-            button1 : {
+        buttons: [
+            {
                 hidden: false,
+                icon: 'fox.png',
                 url: 'https://www.foxnews.com/',
                 text: {
                     main: 'Fox News',
@@ -72,8 +79,9 @@ const drawers = {
                     warn: false
                 }
             },
-            button2 : {
+            {
                 hidden: false,
+                icon: 'weather.png',
                 url: 'https://weather.com/weather/today/l/33e9a4faddfea28cc02768d8c27f285c37419549df2a41bd6cbae78eb7e8c7e9',
                 text: {
                     main: 'Weather.com',
@@ -81,8 +89,9 @@ const drawers = {
                     warn: false
                 }
             },
-            button3 : {
+            {
                 hidden: false,
+                icon: 'npr.png',
                 url: 'https://npr.org/',
                 text: {
                     main: 'NPR News',
@@ -90,14 +99,15 @@ const drawers = {
                     warn: false
                 }
             }
-        }
+        ]
     },
-    drawer3: {
+    {
         hidden:false,
         title: "Cool Stuff",
-        buttons: {
-            button1: {
+        buttons: [
+            {
                 hidden: false,
+                icon: 'list-check.svg',
                 url: 'https://mdohse29.github.io/todoList/',
                 text: {
                     main: 'ToDo List',
@@ -105,8 +115,9 @@ const drawers = {
                     warn: true
                 }
             },
-            button2: {
+            {
                 hidden: false,
+                icon: 'camera-reels.svg',
                 url: 'https://mdohse29.github.io/misc/movieList/',
                 text: {
                     main: 'Full Movie List',
@@ -114,8 +125,9 @@ const drawers = {
                     warn: false
                 }
             },
-            button3: {
+            {
                 hidden: true,
+                icon: '',
                 url: 'https://mdohse29.github.io/picker/',
                 text: {
                     main: 'Gift Picker',
@@ -123,8 +135,9 @@ const drawers = {
                     warn: true
                 }
             },
-            button4: {
+            {
                 hidden: true,
+                icon: 'laughing.png',
                 url: '',
                 text: {
                     main: 'Tell me a Joke',
@@ -133,8 +146,9 @@ const drawers = {
                 },
                 id: 'joke'
             },
-            button5: {
+            {
                 hidden: false,
+                icon: 'easel.svg',
                 url: 'https://mdohse29.github.io/display/',
                 text: {
                     main: 'Display Page',
@@ -142,6 +156,6 @@ const drawers = {
                     warn: false
                 }
             }
-        }
+        ]
     }
-}
+]

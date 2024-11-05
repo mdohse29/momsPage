@@ -46,20 +46,28 @@ function create(id){
         duration: 1000,
         start: function(){
             // $(this).css('z-index', '1000')
-            $(this).css('transition', 'opacity 1000ms ease')
+            $(this).css('transition', 'opacity 1000ms ease');
         },
         complete: function(){
-            $(this).css('opacity', '1')
+            $(this).css('opacity', '1');
         }
     })
 }
 
 function createButtons(dNum){
     let buttonsCont = mkDiv({class:'card-content'});
-    let drawerData = drawers[`drawer${dNum}`];
+    let drawerData = [...drawers];
 
-    for (let b in drawerData.buttons){
-        nestElem([buttonsCont, mkLnk({class:`md-button ps-2 pe-2 mt-2${(drawerData.buttons[b].hidden) ? ' dnone' : ''}`, target:'_blank', href:drawerData.buttons[b].url, inner:drawerData.buttons[b].text.main})])
+    for (let btn of drawerData[dNum - 1].buttons){
+        //md-button ps-2 pe-2 mt-2
+        nestElem([
+            buttonsCont,
+            mkDiv({class:`md-button ps-2 pe-2 mt-2${((btn.hidden) ? ' dnone' : '')}`, url: btn.url, id: ((btn.id) ? btn.id : ''), listeners: [{type:'click', execute:clkBtn}]}),
+            {
+                1: mkElem({elemType:'img', class:'img-thumbnail', src: ((btn.icon) ? `./data/icons/${btn.icon}` : ''), alt: ((btn.icon) ? btn.icon : '')}),
+                2: mkElem({elemType:'span', inner: btn.text.main})
+            }
+        ])
     }
 
     return nestElem([mkDiv({class:'card shadow'}), buttonsCont])
@@ -70,7 +78,7 @@ function destroy(id){
     $(`#${id}-container`).fadeOut({
         duration: 1000,
         start: function(){
-            $(this).css('z-index', '1')
+            $(this).css('z-index', '1');
             $(this).css('transition', '');
         },
         complete: function(){
@@ -79,4 +87,24 @@ function destroy(id){
         }
     })
     
+}
+
+function clkBtn(){
+    let url = this.getAttribute('url');
+
+    if (url){
+        if (url.includes('http')){
+            window.open(url, '_blank');
+        }else{
+            window.open(url, '_self');
+        }
+    }else{
+        if (this.id){
+            switch (this.id){
+                case 'joke':
+                // something here
+                break;
+            }
+        }
+    }
 }
