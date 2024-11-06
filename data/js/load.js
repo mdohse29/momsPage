@@ -12,6 +12,30 @@ let nav_bar = nestElem([
             }
         ])
     }
-])
+]);
 
-document.body.prepend(nav_bar, mkDiv({class:'presentation'}))
+let modal = nestElem([
+    mkDiv({class:'md-modal dnone'}),
+    {
+        1: nestElem([
+            mkDiv({class:'md-modal-background', title:'Click to Close', listeners: [{type:'click', execute: closeModal}]}),
+            mkBtn({class:'btn-close'})
+        ]),
+        2:nestElem([
+            mkDiv({class:'md-modal-content'}),
+            mkDiv({class:'card'}),
+            {
+                1: mkDiv({class:'card-body'}),
+                2: nestElem([
+                    mkDiv({class:'card-footer'}),
+                    {
+                        1: mkBtn({id:'ans', class:'btn btn-success', inner:'Show Answer', listeners: [{type:'click', execute: showAnswer}]}),
+                        2: mkBtn({id:'close', class:'btn btn-danger dnone', inner:'Close', listeners: [{type:'click', execute: closeModal}]})
+                    }
+                ])
+            }
+        ])
+    }
+]);
+
+document.body.prepend(nav_bar, mkDiv({class:'presentation'}), modal);

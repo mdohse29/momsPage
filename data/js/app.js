@@ -70,7 +70,7 @@ function createButtons(dNum){
         ])
     }
 
-    return nestElem([mkDiv({class:'card shadow'}), buttonsCont])
+    return nestElem([mkDiv({class:'card shadow drawer'}), buttonsCont])
 }
 
 function destroy(id){
@@ -89,7 +89,7 @@ function destroy(id){
     
 }
 
-function clkBtn(){
+async function clkBtn(){
     let url = this.getAttribute('url');
 
     if (url){
@@ -103,8 +103,49 @@ function clkBtn(){
             switch (this.id){
                 case 'joke':
                 // something here
+                document.querySelector('.md-modal').classList.remove('dnone');
+
+                let joke = await makeMeLaugh();
+                let body = document.querySelector('.card-body');
+
+                document.querySelector('#loading').remove();
+
+                if (joke){
+                    body.append(joke.setup, joke.punchline);
+                }else{
+                    body.append(mkP({inner:'Sorry, Something went wrong!'}))
+                }
                 break;
             }
         }
     }
+}
+
+async function makeMeLaugh(){
+
+    document.querySelector('.card-body').append(mkP({id: 'loading', inner:'Loading...'}))
+
+    let response = await fetch('https://official-joke-api.appspot.com/random_joke');
+
+    if (!response.ok){
+        return null;
+    }
+
+    let data = await response.json();
+    
+    return { setup: mkP({inner: data.setup}), punchline: nestElem([mkP({class:'dnone', id:'answer', inner:data.punchline}),{ 1:mkElem({elemType:'br'}),2:mkElem({elemType:'img', src:'./data/icons/laughing2.png'}) }]) }
+
+}
+
+function closeModal(){
+    document.querySelector('.md-modal').classList.add('dnone');
+    document.querySelector('#close').classList.add('dnone');
+    document.querySelector('#ans').classList.remove('dnone');
+    document.querySelector('.card-body').innerHTML = '';
+}
+
+function showAnswer(){
+    document.querySelector('#answer').classList.remove('dnone');
+    document.querySelector('#close').classList.remove('dnone');
+    document.querySelector('#ans').classList.add('dnone');
 }
