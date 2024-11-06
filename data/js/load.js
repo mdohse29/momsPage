@@ -30,7 +30,8 @@ let modal = nestElem([
                     mkDiv({class:'card-footer'}),
                     {
                         1: mkBtn({id:'ans', class:'btn btn-success', inner:'Show Answer', listeners: [{type:'click', execute: showAnswer}]}),
-                        2: mkBtn({id:'close', class:'btn btn-danger dnone', inner:'Close', listeners: [{type:'click', execute: closeModal}]})
+                        2: mkBtn({id:'back', class:'btn btn-primary me-1 dnone', inner:'Back', listeners: [{type:'click', execute: goBack}]}),
+                        3: mkBtn({id:'close', class:'btn btn-danger dnone', inner:'Close', listeners: [{type:'click', execute: closeModal}]})
                     }
                 ])
             }
