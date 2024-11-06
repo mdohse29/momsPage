@@ -133,19 +133,43 @@ async function makeMeLaugh(){
 
     let data = await response.json();
     
-    return { setup: mkP({inner: data.setup}), punchline: nestElem([mkP({class:'dnone', id:'answer', inner:data.punchline}),{ 1:mkElem({elemType:'br'}),2:mkElem({elemType:'img', src:'./data/icons/laughing2.png'}) }]) }
+    return { setup: nestElem([
+        mkP({inner: data.setup, id: 'setup'}),
+        { 
+            1:mkElem({elemType:'br'}),
+            2:mkElem({elemType:'img', src:'./data/icons/thinker.png'}) 
+        }
+    ]),
+    punchline: nestElem([
+        mkP({class:'dnone', id:'answer', inner:data.punchline}),
+        { 
+            1:mkElem({elemType:'br'}),
+            2:mkElem({elemType:'img', src:'./data/icons/laughing2.png'}) 
+        }
+    ]) }
 
 }
 
 function closeModal(){
     document.querySelector('.md-modal').classList.add('dnone');
+    document.querySelector('#back').classList.add('dnone');
     document.querySelector('#close').classList.add('dnone');
     document.querySelector('#ans').classList.remove('dnone');
     document.querySelector('.card-body').innerHTML = '';
 }
 
 function showAnswer(){
+    document.querySelector('#setup').classList.add('dnone');
     document.querySelector('#answer').classList.remove('dnone');
+    document.querySelector('#back').classList.remove('dnone');
     document.querySelector('#close').classList.remove('dnone');
     document.querySelector('#ans').classList.add('dnone');
+}
+
+function goBack(){
+    document.querySelector('#setup').classList.remove('dnone');
+    document.querySelector('#answer').classList.add('dnone');
+    document.querySelector('#back').classList.add('dnone');
+    document.querySelector('#close').classList.add('dnone');
+    document.querySelector('#ans').classList.remove('dnone');
 }
