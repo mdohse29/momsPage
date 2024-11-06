@@ -136,7 +136,7 @@ const drawers = [
                 }
             },
             {
-                hidden: true,
+                hidden: false,
                 icon: 'laughing.png',
                 url: '',
                 text: {

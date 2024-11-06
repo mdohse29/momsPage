@@ -27,7 +27,7 @@ nav {
     display: none !important;
 }
 
-.card {
+.drawer {
     background: white;
     height: 95%;
     width: inherit;
@@ -74,8 +74,85 @@ nav {
     box-shadow: 1px 2px 20px black;
 }
 
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.md-modal {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 1500;
+}
+
+.md-modal-background {
+    display: flex;
+    justify-content: right;
+    height: inherit;
+    width: inherit;
+    background-color: rgba(var(--bs-info-rgb), 0.2);
+    position: inherit;
+    z-index: inherit;
+    cursor: pointer;
+}
+
+.md-modal-content, .md-modal-header, .md-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    position: relative;
+    padding: 10px 10px 0px 10px;
+    max-width: 860px;
+    z-index: 1600;
+}
+
+.md-modal-header, .md-modal-footer {
+    width:inherit;
+}
+
+.md-modal-header {
+    border-radius: 15px 15px 0px 0px;
+}
+.md-modal-footer {
+    border-radius: 0px 0px 15px 15px;
+    min-height: 22px;
+}
+
+.md-modal-content {
+    max-height: 470px;
+    min-width: 250px;
+    min-height: 250px;
+    padding-bottom: 10px;
+    border-radius: 0.375rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    font-size: 1.15rem;
+}
+
+.md-modal-background > .btn-close {
+    background-color: white;
+    margin: 20px 40px 0px 0px;
+}
+
+.card-footer {
+    text-align: center;
+}
+
 .container.fade-in {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 .presentation {
