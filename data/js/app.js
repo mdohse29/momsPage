@@ -125,13 +125,11 @@ async function makeMeLaugh(){
 
     document.querySelector('.card-body').append(mkP({id: 'loading', inner:'Loading...'}))
 
-    let response = await fetch('https://official-joke-api.appspot.com/random_joke');
+    let data = await getRandomJoke();
 
-    if (!response.ok){
+    if (!data){
         return null;
     }
-
-    let data = await response.json();
     
     return { setup: nestElem([
         mkP({inner: data.setup, id: 'setup'}),
