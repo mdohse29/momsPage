@@ -126,9 +126,9 @@ const drawers = [
                 }
             },
             {
-                hidden: true,
-                icon: '',
-                url: 'https://mdohse29.github.io/picker/',
+                hidden: false,
+                icon: 'box-gift-1.svg',
+                url: 'https://dohsedomain.com/picker/',
                 text: {
                     main: 'Gift Picker',
                     sub: 'Seasonal',
@@ -147,7 +147,7 @@ const drawers = [
                 id: 'joke'
             },
             {
-                hidden: false,
+                hidden: true,
                 icon: 'easel.svg',
                 url: 'https://mdohse29.github.io/display/',
                 text: {
