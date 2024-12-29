@@ -126,7 +126,7 @@ const drawers = [
                 }
             },
             {
-                hidden: false,
+                hidden: true,
                 icon: 'box-gift-1.svg',
                 url: 'https://dohsedomain.com/picker/',
                 text: {
