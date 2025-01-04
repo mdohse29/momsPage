@@ -137,14 +137,15 @@ async function makeMeLaugh(){
             1:mkElem({elemType:'br'}),
             2:mkElem({elemType:'img', src:'./data/icons/thinker.png'}) 
         }
-    ]),
-    punchline: nestElem([
-        mkP({class:'dnone', id:'answer', inner:data.punchline}),
-        { 
-            1:mkElem({elemType:'br'}),
-            2:mkElem({elemType:'img', src:'./data/icons/laughing2.png'}) 
-        }
-    ]) }
+        ]),
+        punchline: nestElem([
+            mkP({class:'dnone', id:'answer', inner:data.punchline}),
+            { 
+                1:mkElem({elemType:'br'}),
+                2:mkElem({elemType:'img', src:'./data/icons/laughing2.png'}) 
+            }
+        ])
+    }
 
 }
 
