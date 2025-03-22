@@ -126,6 +126,16 @@ const drawers = [
                 }
             },
             {
+                hidden: false,
+                icon: 'book-1.svg',
+                url: 'https://drive.google.com/drive/folders/1XnGdeMAppEpdOnO3CrRQZsCjbjCC-8xD?usp=drive_link',
+                text: {
+                    main: 'Recipes',
+                    sub:'',
+                    warn:false
+                }
+            },
+            {
                 hidden: true,
                 icon: 'box-gift-1.svg',
                 url: 'https://dohsedomain.com/picker/',
