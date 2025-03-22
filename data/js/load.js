@@ -39,4 +39,10 @@ let modal = nestElem([
     }
 ]);
 
-document.body.prepend(nav_bar, mkDiv({class:'presentation'}), modal);
+let attr = nestElem([
+    mkElem({elemType:'span', class:'attr', inner:'Icons by '}),
+    mkElem({elemType:'a', target:'_blank', href:'https://icons8.com', inner:'Icons 8'})
+])
+
+document.body.prepend(nav_bar, mkDiv({class:'presentation'}), modal, attr);
+mrd();

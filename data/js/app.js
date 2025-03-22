@@ -64,7 +64,7 @@ function createButtons(dNum){
             buttonsCont,
             mkDiv({class:`md-button ps-2 pe-2 mt-2${((btn.hidden) ? ' dnone' : '')}`, url: btn.url, id: ((btn.id) ? btn.id : ''), listeners: [{type:'click', execute:clkBtn}]}),
             {
-                1: mkElem({elemType:'img', class:'img-thumbnail', src: ((btn.icon) ? `./data/icons/${btn.icon}` : ''), alt: ((btn.icon) ? btn.icon : '')}),
+                1: mkElem({elemType:'img', class:'img-thumbnail', src: ((btn.icon) ? (btn.icon.includes('http')) ? btn.icon : `./data/icons/${btn.icon}` : ''), alt: ((btn.icon) ? btn.icon : '')}),
                 2: mkElem({elemType:'span', inner: btn.text.main})
             }
         ])
@@ -137,14 +137,15 @@ async function makeMeLaugh(){
             1:mkElem({elemType:'br'}),
             2:mkElem({elemType:'img', src:'./data/icons/thinker.png'}) 
         }
-    ]),
-    punchline: nestElem([
-        mkP({class:'dnone', id:'answer', inner:data.punchline}),
-        { 
-            1:mkElem({elemType:'br'}),
-            2:mkElem({elemType:'img', src:'./data/icons/laughing2.png'}) 
-        }
-    ]) }
+        ]),
+        punchline: nestElem([
+            mkP({class:'dnone', id:'answer', inner:data.punchline}),
+            { 
+                1:mkElem({elemType:'br'}),
+                2:mkElem({elemType:'img', src:'./data/icons/laughing2.png'}) 
+            }
+        ])
+    }
 
 }
 
